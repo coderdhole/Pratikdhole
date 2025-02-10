@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - EcoField Export Pvt. Ltd.</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .buttons-container {
+            display: flex;
+            justify-content: center; /* Center-align buttons */
+            gap: 2px; /* Space between buttons */
+            margin-top: 20px;
+            flex-wrap: nowrap; /* Prevent the buttons from wrapping to the next line */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="company-header" style="text-align: center;">
+            <div class="company-name" style="font-size: 36px; font-weight: bold;">Ecofield Exports</div>
+        </div>
+        <div class="buttons-container" style="text-align: center; margin-top: 20px;">
+            <button class="nav-button" onclick="location.href='MGH.html'">Home</button>
+            <button class="nav-button" onclick="location.href='products.html'">Products</button>
+            <button class="nav-button" onclick="location.href='about.html'">About Us</button>
+            <button class="nav-button" onclick="location.href='contact.html'">Contact Us</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Latest Products Section -->
+        <section class="latest-products">
+            <h2 class="multi-colored-title">Latest Products</h2>
+            <div class="product-cards">
+                <div class="product-card">
+                    <img src="images/Amchur powder.jpg" alt="Amchur Powder">
+                    <p>Color: Green</p>
+                    <p>Type: Herbal</p>
+                    <button onclick="openModal('Amchur Powder')">Enquire</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/top-view-recipe-with-plantain-banana.jpg" alt="Banana Powder">
+                    <p>Color: Green</p>
+                    <p>Type: Herbal</p>
+                    <button onclick="openModal('Banana Powder')">Enquire</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/Tamarind Powder.jpg" alt="Tamarind Powder">
+                    <p>Color: Green</p>
+                    <p>Type: Herbal</p>
+                    <button onclick="openModal('Tamarind Powder')">Enquire</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/Red onion powder.jpg" alt="Red Onion Powder">
+                    <p>Color: Green</p>
+                    <p>Type: Herbal</p>
+                    <button onclick="openModal('Red Onion Powder')">Enquire</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Bestseller Section -->
+        <section class="our-bestseller">
+            <h2 class="multi-colored-title">Our Bestseller</h2>
+            <div class="product-cards">
+                <div class="product-card">
+                    <img src="images/Amchur powder.jpg" alt="Amchur Powder">
+                    <p>Color: Green</p>
+                    <p>Type: Herbal</p>
+                    <button onclick="openModal('Amchur Powder')">Enquire</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/top-view-recipe-with-plantain-banana.jpg" alt="Banana Powder">
+                    <p>Color: Green</p>
+                    <p>Type: Herbal</p>
+                    <button onclick="openModal('Banana Powder')">Enquire</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/Tamarind Powder.jpg" alt="Tamarind Powder">
+                    <p>Color: Green</p>
+                    <p>Type: Herbal</p>
+                    <button onclick="openModal('Tamarind Powder')">Enquire</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/Red onion powder.jpg" alt="Red Onion Powder">
+                    <p>Color: Green</p>
+                    <p>Type: Herbal</p>
+                    <button onclick="openModal('Red Onion Powder')">Enquire</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EcoField Export Pvt. Ltd. All rights reserved.</p>
+    </footer>
+
+<style>
+    .multi-colored-title {
+        font-size: 28px;
+        font-weight: bold;
+        background: linear-gradient(to right, #1e6d21, #696a6a);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+        text-align: center;
+    }
+</style>
+
+<!-- Enquiry Modal -->
+<div id="enquiryModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="productTitle">Enquiry Form</h2>
+        <form id="enquiryForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+            
+            <label for="quantity">Quantity Needed (in kgs):</label>
+            <input type="number" id="quantity" name="quantity" placeholder="Enter Quantity" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Function to open the modal with the correct product name
+    function openModal(productName) {
+        document.getElementById('productTitle').textContent = "Enquiry for " + productName;
+        document.getElementById('enquiryModal').style.display = 'block';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById('enquiryModal').style.display = 'none';
+    }
+
+    // Close the modal when clicking outside of it
+    window.onclick = function(event) {
+        const modal = document.getElementById('enquiryModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+    // Handle form submission and send enquiry data to backend
+    document.getElementById('enquiryForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        // Get form data
+        const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            quantity: document.getElementById("quantity").value,
+            product: document.getElementById("productTitle").textContent.replace("Enquiry for ", "")
+        };
+
+        // Send data to backend
+        try {
+            const response = await fetch("http://localhost:3000/api/enquiries", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+            alert(result.message); // Show success message
+            closeModal(); // Close the enquiry modal
+        } catch (error) {
+            console.error("Error submitting enquiry:", error);
+            alert("Failed to send enquiry. Please try again.");
+        }
+    });
+</script>
+
+</body>
+</html>

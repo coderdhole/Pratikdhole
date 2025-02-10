@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EcoField Export Pvt. Ltd.</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        body {
+            zoom: 120%;
+        }
+
+        .about-us {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 960px;
+        }
+
+        .image-info-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            text-align: left;
+            margin-right: 40px;
+        }
+
+        .image-container img {
+            max-width: 300px;
+        }
+
+        .green-section {
+            background-color: #4CAF50;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 30px;
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .green-section::before,
+        .green-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 20%;
+            background-color: #4CAF50;
+        }
+
+        .green-section::before {
+            left: -20%;
+        }
+
+        .green-section::after {
+            right: -20%;
+        }
+
+        .box {
+            display: inline-block;
+            width: 30%;
+            margin: 0 10px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .box h3 {
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            font-size: 14px;
+        }
+
+        .green-section .box img {
+            max-width: 70px;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive design for mobile */
+        @media (max-width: 768px) {
+            .about-us {
+                padding-left: 20px; /* Adds space to the left for mobile screens */
+                padding-right: 20px; /* Optionally add some space to the right */
+            }
+            .image-info-container {
+                flex-direction: column; /* Stack image and text on top of each other */
+                align-items: center; /* Center the content */
+            }
+
+            .image-container {
+                margin-right: 0; /* Remove right margin */
+                text-align: center; /* Center the image */
+            }
+
+            .image-container img {
+                max-width: 80%; /* Allow image to scale down */
+            }
+
+            .nav-button {
+                padding: 6px 12px; /* Smaller padding for mobile */
+                font-size: 12px; /* Smaller font size for mobile */
+            }
+
+            
+                
+
+            .green-section {
+                flex-direction: column; /* Stack the boxes vertically */
+                align-items: center;
+            }
+
+            .box {
+                width: 80%; /* Make each box take up 80% of the screen */
+                margin: 10px 0; /* Add space between the boxes */
+            }
+
+            .buttons-container {
+                display: flex;
+                justify-content: center; /* Center-align buttons */
+                gap: 5px; /* Space between buttons */
+                margin-top: 20px;
+                flex-wrap: nowrap; /* Prevent the buttons from wrapping to the next line */
+            }
+
+            
+        }
+
+        .multi-colored-title {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(to right, #1e6d21, #696a6a);
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+            text-align: center;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div class="company-header" style="text-align: center;">
+            <div class="company-name" style="font-size: 36px; font-weight: bold;">Ecofield exports</div>
+        </div>
+        <div class="buttons-container" style="text-align: center; margin-top: 20px;">
+            <button class="nav-button" onclick="location.href='MGH.html'">Home</button>
+            <button class="nav-button" onclick="location.href='products.html'">Products</button>
+            <button class="nav-button" onclick="location.href='about.html'">About Us</button>
+            <button class="nav-button" onclick="location.href='contact.html'">Contact Us</button>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="about-us">
+            <h1 class="multi-colored-title">Welcome to EcoField Export Pvt. Ltd.</h1>
+
+            <div class="image-info-container">
+                <div class="image-container">
+                    <img src="C:\Users\Pratiksha\Desktop\MG_Export\images\office.jpg" alt="EcoField Office"> 
+                </div>
+                <div>
+                    <p>
+                        At EcoField Export Pvt. Ltd., Our commitment is to deliver the finest agricultural and ecological products across the world.
+                        As pioneers in the export of high-quality dehydrated fruits, vegetables, and natural extracts, we aim to meet the growing demand for 
+                        sustainable and eco-friendly food products worldwide. With strategic partnerships with our suppliers based in India, we focus on delivering 
+                        high-quality food materials to the people around the world.
+                    </p>
+                    <p>
+                        We source the raw materials from the farmers directly to ensure we provide high-quality products and price advantages to our buyers. 
+                        With our vast industrial expertise in consulting and supply chain analysis of the food and beverage industry, we believe that we master in providing 
+                        price advantages to our buyers.
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="multi-colored-title">Our Primary Products</h2>
+            <ul>
+                <li>Onion Powder: Perfect for adding rich flavor to a variety of dishes.</li>
+                <li>Dehydrated Onion, Tomato, and Garlic: Convenient and long-lasting ingredients for culinary applications.</li>
+                <li>Moringa Powder: A superfood packed with essential nutrients and antioxidants.</li>
+                <li>Banana Powder: Versatile and nutritious, ideal for beverages, baby food, and baking.</li>
+                <li>Wheat Flour: Premium quality flour suitable for diverse baking and cooking needs.</li>
+                <li>Tulsi Extract: A herbal remedy known for its health-enhancing properties.</li>
+                <li>Black Turmeric Powder: A rare and powerful medicinal ingredient.</li>
+                <li>Neem Powder: Widely used in agriculture and skincare for its natural benefits.</li>
+                <li>Gum Arabic: A versatile product for food, beverage, and industrial applications.</li>
+                <li>Rice Flour: Gluten-free and ideal for various culinary uses.</li>
+            </ul>
+
+            <section class="green-section"> 
+                <div class="box">
+                    <img src="C:\Users\Pratiksha\Desktop\MG_Export\images\binoculars.png" alt="Logo 1"> 
+                    <h3>Our Vision</h3>
+                    <p>At EcoField Export, we envision a world where sustainable agricultural practices thrive, and high-quality food products are accessible globally.......</p>
+                </div>
+
+                <div class="box">
+                    <img src="C:\Users\Pratiksha\Desktop\MG_Export\images\quality.png" alt="Logo 1"> 
+                    <h3>Our Quality</h3>
+                    <p>Our products undergo rigorous quality checks to meet international standards, We prioritize sustainability in every step of our operations</p>
+                </div>
+
+                <div class="box">
+                    <img src="C:\Users\Pratiksha\Desktop\MG_Export\images\global.png" alt="Logo 1"> 
+                    <h3>Global Reach</h3>
+                    <p>With an extensive network of partners, we cater to diverse markets worldwide, Your satisfaction is our priority. We tailor our services to meet your unique needs.....</p>
+                </div>
+            </section>
+
+            <h2 class="multi-colored-title">The EcoField Advantage</h2>
+            <p>
+                Our strength lies in our steadfast dedication to quality, sustainability, and innovation. By choosing EcoField Export Pvt Ltd., you benefit from 
+                a seamless supply chain, high-quality product consistency, and a partner who values your success. Our team’s expertise ensures we deliver products that 
+                exceed your quality expectations, making us your trusted ally in the global agricultural trading market.
+            </p>
+
+            <h2 class="multi-colored-title">Our Goals</h2>
+            <ul>
+                <li>
+                    <b>Core Goals:</b> 
+                    To process, manufacture, package, and add value to agricultural and food products such as dehydrated vegetables, moringa powder, banana powder, 
+                    wheat flour, tulsi extract, black turmeric powder, neem powder, gum arabic, rice flour, spices, pulses, grains, and all varieties of vegetables for 
+                    domestic and international markets.
+                </li>
+                <li>
+                    To engage in the import and export of processed and unprocessed food and agricultural products while adhering to all legal and regulatory requirements.
+                </li>
+                <li>
+                    <b>Supporting Goals:</b> Establish state-of-the-art facilities for processing, packaging, and storage, ensuring quality and hygiene.
+                </li>
+                <li>
+                    Forge strategic partnerships with domestic and international entities to strengthen our position in the global market.
+                </li>
+                <li>
+                    Undertake initiatives that complement and enhance our core business goals.
+                </li>
+                <li>
+                    <b>Other Objectives:</b> Conduct research and development to innovate and improve food processing techniques.
+                </li>
+                <li>
+                    Implement effective marketing, distribution, and promotional strategies to expand our global footprint.
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EcoField Export Pvt. Ltd. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
